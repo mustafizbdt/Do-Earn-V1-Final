@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Earn & Reward App</title>
+    <title>Do Earn</title>
     
     <!-- Google Fonts (Nunito) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,19 +189,19 @@
                 <div class="task-container">
                     <i class="fas fa-video task-icon"></i>
                     <h3>VPN চালু করে কাজ শুরু করুন। প্রতি ১০ টি এড দেখার পর ১ বার ক্লিক করে ২ মিনিট অপেক্ষা করুন</h3>
-                    <p>Earn 0.05 TK for every ad.</p>
+                    <p>Earn 50 TK for every ad.</p>
                     <button id="watch-ad-btn" class="action-btn">Watch Ad</button>
                 </div>
                 <div class="task-container">
                     <i class="fab fa-telegram task-icon"></i>
                     <h3>Join Our Channel</h3>
-                    <p>Get 2 bonus points.</p>
+                    <p>Get 20 bonus points.</p>
                     <button id="join-channel-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
                 <div class="task-container">
                     <i class="fas fa-users task-icon"></i>
                     <h3>Join Our Group</h3>
-                    <p>Get 2 bonus points.</p>
+                    <p>Get 20 bonus points.</p>
                     <button id="join-group-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
             </div>
@@ -209,19 +209,18 @@
             <!-- Withdraw Page -->
             <div id="withdraw-page" class="page">
                 <h2>Withdraw Points</h2>
-                <p>Minimum 30 TK required to withdraw.</p>
+                <p>Minimum 50 TK required to withdraw.</p>
                 <form id="withdraw-form">
                     <div class="form-group">
                         <label for="withdraw-method">Method:</label>
                         <select id="withdraw-method" required>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
-                            <option value="Payeer">Payeer</option>
-                            <option value="Binance">Binance</option>
+                            
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="account-number">Account Number/ID:</label>
+                        <label for="account-number">Payment Number</label>
                         <input type="text" id="account-number" placeholder="e.g., 012345..." required>
                     </div>
                     <div class="form-group">
@@ -261,10 +260,10 @@
             const CHANNEL_LINK = "https://t.me/teaminvisiblebd";
             const GROUP_LINK = "https://t.me/doearnbd";
             const DAILY_AD_LIMIT = 50;
-            const POINTS_PER_AD = 0.05;
-            const CHANNEL_JOIN_BONUS = 2;
-            const GROUP_JOIN_BONUS = 2;
-            const MIN_WITHDRAW_POINTS = 30;
+            const POINTS_PER_AD = 50;
+            const CHANNEL_JOIN_BONUS = 20;
+            const GROUP_JOIN_BONUS = 20;
+            const MIN_WITHDRAW_POINTS = 50;
 
             // --- DOM Elements ---
             const userPhotoElem = document.getElementById('user-photo');
