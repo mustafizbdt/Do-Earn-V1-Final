@@ -156,11 +156,10 @@
                 <img id="user-photo" src="" alt="User Photo">
                 <div class="user-details">
                     <h1 id="user-name">Loading... <i class="fas fa-check-circle verified-icon"></i></h1>
-                    <p>Balance: <span id="user-points">0</span>TK</p>
+                    <p>Balance: <span id="user-points">0</span>Points</p>
                 </div>
             </div>
         </header>
-
         <main id="main-content">
             <!-- Home Page -->
             <div id="home-page" class="page active">
@@ -168,7 +167,7 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>Daily Ads Watched</h3>
-                        <p><span id="daily-ads-watched">00</span> /  50</p>
+                        <p><span id="daily-ads-watched">00</span> /  20</p>
                     </div>
                     <div class="stat-card">
                         <h3>Total Referrals</h3>
@@ -189,19 +188,19 @@
                 <div class="task-container">
                     <i class="fas fa-video task-icon"></i>
                     <h3>VPN চালু করে কাজ শুরু করুন। প্রতি ১০ টি এড দেখার পর ১ বার ক্লিক করে ২ মিনিট অপেক্ষা করুন</h3>
-                    <p>Earn 50 TK for every ad.</p>
+                    <p>Earn 50 points for every ad.</p>
                     <button id="watch-ad-btn" class="action-btn">Watch Ad</button>
                 </div>
                 <div class="task-container">
                     <i class="fab fa-telegram task-icon"></i>
                     <h3>Join Our Channel</h3>
-                    <p>Get 20 bonus points.</p>
+                    <p>Get 1000 bonus points.</p>
                     <button id="join-channel-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
                 <div class="task-container">
                     <i class="fas fa-users task-icon"></i>
                     <h3>Join Our Group</h3>
-                    <p>Get 20 bonus points.</p>
+                    <p>Get 1000 bonus points.</p>
                     <button id="join-group-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
             </div>
@@ -209,7 +208,7 @@
             <!-- Withdraw Page -->
             <div id="withdraw-page" class="page">
                 <h2>Withdraw Points</h2>
-                <p>Minimum 50 TK required to withdraw.</p>
+                <p>Minimum 30 TK required to withdraw.</p>
                 <form id="withdraw-form">
                     <div class="form-group">
                         <label for="withdraw-method">Method:</label>
@@ -257,13 +256,13 @@
             const BOT_TOKEN = "8265295612:AAHierXdyLwIgojzhwy19iT3swWOc9TfJAE";
             const BOT_USERNAME = "doearnv1bot"; // Your bot's username
             const ADMIN_CHAT_ID = "8045654494";
-            const CHANNEL_LINK = "https://t.me/teaminvisiblebd";
+            const CHANNEL_LINK = "https://t.me/doearnbd";
             const GROUP_LINK = "https://t.me/doearnbd";
             const DAILY_AD_LIMIT = 50;
             const POINTS_PER_AD = 50;
-            const CHANNEL_JOIN_BONUS = 20;
-            const GROUP_JOIN_BONUS = 20;
-            const MIN_WITHDRAW_POINTS = 50;
+            const CHANNEL_JOIN_BONUS = 1000;
+            const GROUP_JOIN_BONUS = 1000;
+            const MIN_WITHDRAW_POINTS = 30000;
 
             // --- DOM Elements ---
             const userPhotoElem = document.getElementById('user-photo');
@@ -344,7 +343,7 @@
                 dailyAdsWatchedElem.textContent = userState.dailyAdWatchCount;
                 referralCountElem.textContent = userState.referrals.length;
 
-                referralLinkElem.value = `https://t.me/${BOT_USERNAME}?start=ref_${userState.userId}`;
+                referralLinkElem.value = `https://t.me/${doearnv1bot}?start=ref_${userState.userId}`;
 
                 // Update task button states
                 if (userState.hasJoinedChannel) {
